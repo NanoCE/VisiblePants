@@ -24,7 +24,7 @@ namespace VisiblePants
             public static void Postfix(Pawn __instance)
             {
                 // Redraw pawn apparel if settings have changed
-                if (__instance.apparel != null && VisiblePantsUtility.cachedDrawPantsOver != VisiblePantsSettings.drawPantsOver)
+                if (__instance != null && __instance.apparel != null && VisiblePantsUtility.cachedDrawPantsOver != VisiblePantsSettings.drawPantsOver)
                 {
                     if (VisiblePantsUtility.ticksToCacheChange == 0)
                     {
